@@ -16,7 +16,6 @@ public class Calculator {
     public int adunare(int a, int b) {
         rezultat = a + b;
         return rezultat;
-
     }
 
     public int scadere(int a, int b) {
@@ -27,7 +26,6 @@ public class Calculator {
     public int inmultire(int a, int b) {
         rezultat = a * b;
         return rezultat;
-
     }
 
     public int impartire(int a, int b) {
