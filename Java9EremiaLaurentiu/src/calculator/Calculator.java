@@ -4,14 +4,15 @@
  * and open the template in the editor.
  */
 package calculator;
-
+import java.util.Scanner;
 /**
  *
  * @author Laurentiu
  */
 public class Calculator {
 
-    int rezultat = 0;
+   int rezultat = 0; 
+   
 
     public int adunare(int a, int b) {
         rezultat = a + b;

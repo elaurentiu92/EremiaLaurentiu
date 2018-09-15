@@ -21,6 +21,7 @@ public class ExecutorCalcule {
         // TODO code application logic here
         Calculator unCalculator = new Calculator(); // instantiate
         
+        
         System.out.println("Introduceti primul numar:");
         Scanner sc = new Scanner(System.in);
         int i = sc.nextInt();
@@ -28,6 +29,10 @@ public class ExecutorCalcule {
         System.out.println("Introduceti al 2-lea numar");
         Scanner sc1 = new Scanner(System.in);
         int j = sc1.nextInt();
+        
+        System.out.println("Introduceti un operator:");
+        Scanner sc2 = new Scanner (System.in);
+        String operator = sc2.next();
         
         int iesireAdunare = unCalculator.adunare(i, j);
         System.out.println(iesireAdunare);
