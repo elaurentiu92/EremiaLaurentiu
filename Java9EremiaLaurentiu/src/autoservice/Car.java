@@ -53,9 +53,11 @@ public class Car implements Saleable, Rentable {
     public int decreaseSpeed(int value){
         return (speed - value);
     }
+    @Override
     public int increaseRentPrice(int value){
         return (rentPrice + value);
     }
+    @Override
     public int decreaseSalePrice(int value){
         return (salePrice - value);
     }
