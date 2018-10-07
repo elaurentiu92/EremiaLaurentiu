@@ -16,20 +16,21 @@ public class TestCalculator {
      */
     public static void main(String[] args) {
         //creaza un calculator
-        Carcasa calculator = new Carcasa();
-        // Apasam butoane pana apare un operator
-        calculator.buton1.apasa();
-        calculator.buton2.apasa();
-        calculator.buton3.apasa();
-        calculator.butonPlus.apasa(); 
-        calculator.buton3.apasa();
-        calculator.buton2.apasa();
-        calculator.buton1.apasa();
-        // Apasam butoane pana apare =
-        calculator.butonEgal.apasa();
-        // afisam rezultatul
-        System.out.println(calculator.ecran.getAfisaj());
+       Carcasa calculator = new Carcasa();
         
+        // Apasam butoane pana apare un operator
+       calculator.buton1.apasa();
+       calculator.buton2.apasa();
+       calculator.buton3.apasa();
+       calculator.butonPlus.apasa(); 
+       calculator.buton3.apasa();
+       calculator.buton2.apasa();
+       calculator.buton1.apasa();
+        // Apasam butoane pana apare =
+       calculator.butonEgal.apasa();
+        // afisam rezultatul
+        
+   
         
     }
     
