@@ -20,7 +20,6 @@ public class RegularExpression {
         Scanner sc = new Scanner(System.in);
         String userInput = sc.next();
         String regex = "^[1-2]((0[1-9]|1[012])(0[1-9]|1\\d|2[0-8])|(0[13578]|1[02])(29|3[01]))(19\\d\\d|20\\d\\d)\\d{4}$";
-        String regex = "^[1-2](0\\d|1[012])(0\\d|1\\d|2\\d|3[0-1])(19\\d\\d|20\\d\\d)\\d{4}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(userInput);
         
