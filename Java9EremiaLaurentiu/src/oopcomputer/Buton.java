@@ -20,11 +20,24 @@ public class Buton {
         stapana = nouaCarcasa;
     }
 
-    /**
-     *
-     */
+    public Character getSimbol() {
+        return simbol;
+    }
+
+    public void setSimbol(Character simbol) {
+        this.simbol = simbol;
+    }
+
+    public Carcasa getStapana() {
+        return stapana;
+    }
+
+    public void setStapana(Carcasa stapana) {
+        this.stapana = stapana;
+    }
+
     public void apasa(){
-        Ecran ecranTemporar = stapana.getEcran();
-        ecranTemporar.setAfisaj(simbol.toString());
+    System.out.println("A fost apasat: " + simbol);
+    stapana.getEcran().setAfisaj(simbol.toString());
     }
 }
