@@ -88,7 +88,7 @@ public class CarTest {
         System.out.println("setCarName");
         Car._Car carName = Car._Car.Ferrari;
         Car instance = new Car(Car._Car.Ferrari, Car.Color.White, 100, 100, 100);
-        instance.setCarName(carName);
+        //instance.setCarName(carName);
         
     }
 
@@ -100,7 +100,7 @@ public class CarTest {
         System.out.println("setColor");
         Car.Color color = Car.Color.White;
         Car instance = new Car(Car._Car.Ferrari, Car.Color.White, 100, 100, 100);
-        instance.setColor(color);
+        //instance.setColor(color);
       
     }
 
@@ -112,7 +112,7 @@ public class CarTest {
         System.out.println("setSpeed");
         int speed = 60;
         Car instance = new Car(Car._Car.Ferrari, Car.Color.White, 100, 100, 100);
-        instance.setSpeed(speed);
+        //instance.setSpeed(speed);
         
     }
 
@@ -124,7 +124,7 @@ public class CarTest {
         System.out.println("setRentPrice");
         int rentPrice = 200;
         Car instance = new Car(Car._Car.Ferrari, Car.Color.White, 100, 100, 100);
-        instance.setRentPrice(rentPrice);
+        //instance.setRentPrice(rentPrice);
       
     }
 
@@ -136,7 +136,7 @@ public class CarTest {
         System.out.println("setSalePrice");
         int salePrice = 5000;
         Car instance = new Car(Car._Car.Ferrari, Car.Color.White, 100, 100, 100);
-        instance.setSalePrice(salePrice);
+       // instance.setSalePrice(salePrice);
        
     }
 
