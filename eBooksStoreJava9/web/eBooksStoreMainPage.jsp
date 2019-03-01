@@ -13,8 +13,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Main page</title>
         <link rel="stylesheet" type="text/css" href=".\\css\\ebookstore.css">
+        <link href=".\\css\\menu.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>   
+    <body> 
+        <h1> Main Page </h1>
+        
         <c:choose>
             <c:when test="${validUser == true}">
                 <%@ include file="./utils/eBooksStoreMenu.jsp" %>

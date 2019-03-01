@@ -14,8 +14,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Electronic Books Store Manage Users</title>
         <link rel="stylesheet" type="text/css" href=".\\css\\ebookstore.css">
+        <link href=".\\css\\menu.css" rel="stylesheet" type="text/css" />
     </head>
 <body>
+    <h1 background-color: brown>Admin panel for users</h1>
         <%-- test if actual user is authenticated and authorized --%>
         <c:choose>
                 <c:when test="${validUser == true}">   
@@ -30,25 +32,25 @@
                         user="test"  
                         password="test"/>
                         <sql:query dataSource="${snapshot}" var="result">
-                            SELECT EBOOKS.USERS.SSN, EBOOKS.USERS."NAME", EBOOKS.USERS.PASSWORD, EBOOKS.USERS."ROLE" FROM EBOOKS.USERS, EBOOKS.ROLES WHERE EBOOKS.USERS."ROLE" = EBOOKS.ROLES."ROLE" ORDER BY NAME, ROLE ASC 
+                            SELECT EBOOKS.USERS.SSN, EBOOKS.USERS."USERNAME", EBOOKS.USERS.PASSWORD, EBOOKS.USERS."ID_ROLE" FROM EBOOKS.USERS, EBOOKS.ROLES WHERE EBOOKS.USERS."ID_ROLE" = EBOOKS.ROLES."ID" ORDER BY USERNAME, ROLE ASC 
                         </sql:query>
-                        <table border="1" width="100%">
+                        <table border="1" width="100%" >
                             <tr>
-                            <td width="4%" class="thc"> select </td>   
+                            <td width="4%" class="thc" > select </td>   
                             <td width="14%" class="thc"> SSN </td>  
-                            <td width="14%" class="thc">NAME</td>
+                            <td width="14%" class="thc">USERNAME</td>
                             <td width="14%" class="thc">PASSWORD</td>
-                            <td width="14%" class="thc">ROLE <input type="submit" name="admin_userroles_open" value="Admin"></td>
+                            <td width="14%" class="thc">ID_ROLE <input type="submit" name="admin_userroles_open" value="Admin"></td>
                         </table>    
-                        <table border="1" width="100%">    
+                        <table border="1" width="100%" style = "margin-top: 1px;">    
                             </tr>
                             <c:forEach var="row" varStatus="loop" items="${result.rows}">
                             <tr>
                                 <td width="4%" class="tdc"><input type="checkbox" name="admin_users_checkbox" value="${row.ssn}"></td>
                                 <td width="14%" class="tdc"><c:out value="${row.ssn}"/></td>
-                                <td width="14%" class="tdc"><c:out value="${row.name}"/></td>
+                                <td width="14%" class="tdc"><c:out value="${row.username}"/></td>
                                 <td width="14%" class="tdc"><c:out value="${row.password}"/></td>
-                                <td width="14%" class="tdc"><c:out value="${row.role}"/></td>
+                                <td width="14%" class="tdc"><c:out value="${row.id_role}"/></td>
                             </tr>
                             </c:forEach>
                         </table>
@@ -60,30 +62,30 @@
                         user="test"  
                         password="test"/>
                         <sql:query dataSource="${snapshotroles}" var="resultroles">
-                            SELECT ROLE from EBOOKS.ROLES ORDER BY ROLE ASC 
+                            SELECT ID,ROLE from EBOOKS.ROLES ORDER BY ROLE ASC 
                         </sql:query>
                         <table class="tablecenterdwithborder">
                             <tr>
                                 <td>    
                                     <table>
                                         <tr>
-                                            <td> SSN: </td>
+                                            <td class="tdc" > SSN: </td>
                                             <td> <input type="text" name="admin_users_ssn"></input></td>
                                         </tr>                                        
                                         <tr>
-                                            <td> NAME: </td>
+                                            <td class="tdc"> USERNAME: </td>
                                             <td> <input type="text" name="admin_users_username"></input></td>
                                         </tr>
                                         <tr>
-                                            <td> PASSWORD: </td>
+                                            <td class="tdc"> PASSWORD: </td>
                                             <td> <input type="password" name="admin_users_password"></input></td>
                                         </tr>
                                         <tr>
-                                            <td> ROLE: </td>
+                                            <td class="tdc"> ROLE: </td>
                                             <td>
                                                 <select name="admin_user_role" required="true">
                                                     <c:forEach var="rowrole" items="${resultroles.rows}">    
-                                                        <option name="admin_users_roles" value="${rowrole.role}">${rowrole.role}</option>
+                                                        <option name="admin_users_roles" value="${rowrole.id}">${rowrole.id}.${rowrole.role}</option>
                                                     </c:forEach>
                                                 </select>
                                             </td>

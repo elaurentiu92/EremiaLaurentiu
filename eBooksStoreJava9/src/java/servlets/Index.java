@@ -59,7 +59,7 @@ public class Index extends HttpServlet {
             Class driverClass = Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-            String query = "SELECT NAME, PASSWORD, ROLE FROM EBOOKS.USERS WHERE NAME = '"+u+"' AND PASSWORD = '"+p+"'";
+            String query = "SELECT USERNAME, PASSWORD, ROLE FROM EBOOKS.USERS JOIN EBOOKS.ROLES ON ID_ROLE = ID WHERE USERNAME = '"+u+"' AND PASSWORD = '"+p+"'";
             resultSet = statement.executeQuery(query);
             boolean resultSetHasRows = resultSet.next(); 
             if (resultSetHasRows)

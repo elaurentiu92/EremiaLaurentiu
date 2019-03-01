@@ -6,7 +6,7 @@ Copyright gheorgheaurelpacurar
     Copyright  : gheorgheaurelpacurar
 */
 body {
-    background-image: url('../../img/eBooksStoreBackground.jpg');
+    background:url(.../img/books.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     font-family: "Verdana";
@@ -15,9 +15,10 @@ body {
     text-align: center; 
 }
 
-h3 {
-    color: whitesmoke; 
+h1 {
+    color:brown; 
     text-align: center;
+    font-size: 28px
 }
 
 table{
@@ -38,18 +39,22 @@ table{
     background-color: whitesmoke;
     font-size: 12px;
     border-style: solid;
-    border-color: darkgrey;
+    border-color: buttonhighlight;
 }
 .tablecenterdwithborder {
-    border-width: 1px;
+    border-width: 7px;
     border-spacing: 0 0px;
     border-radius: 0.5em;
     margin-left:auto; 
     margin-right:auto;
+    margin-top: 50px;
     background-color: whitesmoke;
     font-size: 12px;
-    border-style: solid;
-    border-color: darkgrey;
+    border-style:outset;
+    border-color: lightskyblue;
+    border-spacing: 3px;
+    
+    
 }
 .tablewithoutborder{
     border-spacing: 0 0px;
@@ -57,21 +62,20 @@ table{
 }
 .thc{
     text-align: center;
-    vertical-align: top;
     font-weight: bold;
-    background-color: lightgrey;
+    background-color: #bf4040;
     color: black;
 }
 td{
     text-align: left;
     vertical-align: top;
-    color: black;
 }
 td.tdl td {
     text-align: left;
-    vertical-align: top;
+    vertical-align: top; 
 }
 .tdc{
+    
     text-align: center;
     vertical-align: middle;
     color: black;
@@ -80,7 +84,7 @@ td.tdl td {
 .tdcred{
     text-align: center;
     vertical-align: middle;
-    background: indianred;
+    background: whitesmoke;
     color: whitesmoke;
 }
 .tdcgreen{
@@ -108,8 +112,7 @@ td.tdl td {
     border: darkgray;
     border-style: solid;
     color: darkgrey;
-    padding: 3px 3px;
-    text-align: center;
+    padding: 10px 10px;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
@@ -120,18 +123,18 @@ td.tdl td {
     border: whitesmoke;
     border-style: solid;
     color: whitesmoke;
-    padding: 3px 3px;
-    text-align: center;
+    padding: 8px 8px;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
     border-radius: 3em;
 }
 input[type=text] {
-    width: 50px;
+    width: 170px;
 }
 .inputlarge[type=text] {
     width: 120px;
+    color: #202020
 }
 input[type=datetime] {
     width: 120px;
@@ -224,4 +227,8 @@ select{
    line-height: 1;
    height: 23px;
    }
-
+ div {
+    border: 1px solid rgba(255, 0, 0, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}

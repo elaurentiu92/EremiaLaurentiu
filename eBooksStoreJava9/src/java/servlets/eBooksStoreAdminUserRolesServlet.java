@@ -64,7 +64,7 @@ public class eBooksStoreAdminUserRolesServlet extends HttpServlet {
                     if(!("".equals(role))){
                         String DML = "INSERT INTO EBOOKS.ROLES VALUES (?)";
                         pstmnt = connection.prepareStatement(DML);
-                        pstmnt.setString(1, role);
+                        pstmnt.setString(1,role);
                         pstmnt.execute();
                         // display a message for ok
                     }

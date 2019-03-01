@@ -65,9 +65,9 @@ public class eBooksStoreAdminUsersServlet extends HttpServlet {
                     String DML = "INSERT INTO EBOOKS.USERS VALUES (?, ?, ?, ?)";
                     pstmnt = connection.prepareStatement(DML);
                     pstmnt.setString(1, ssn);
-                    pstmnt.setString(2, username);
-                    pstmnt.setString(3, user_password);
-                    pstmnt.setString(4, role);
+                    pstmnt.setString(2, role);
+                    pstmnt.setString(3, username);
+                    pstmnt.setString(4, user_password);
                     pstmnt.execute();
                 }
                 catch (ClassNotFoundException | SQLException ex)
@@ -136,7 +136,7 @@ public class eBooksStoreAdminUsersServlet extends HttpServlet {
                             // realize update of all selected rows
                             String ssn = s;
                             if("".equals(username)){ // only password/s should be updated
-                                String DML = "UPDATE EBOOKS.USERS SET ssn=?, password=?,role=? WHERE SSN=?";
+                                String DML = "UPDATE EBOOKS.USERS SET SSN=?, PASSWORD=?,ID_ROLE=? WHERE SSN=?";
                                 pstmnt = connection.prepareStatement(DML);
                                 pstmnt.setString(1, ssn);
                                 pstmnt.setString(2, user_password);
@@ -144,14 +144,14 @@ public class eBooksStoreAdminUsersServlet extends HttpServlet {
                                 pstmnt.setString(4, ssn);
                             }
                             else if("".equals(user_password)){// only username should be updated
-                                String DML = "UPDATE EBOOKS.USERS SET ssn=?, name=?,role=? WHERE SSN=?";
+                                String DML = "UPDATE EBOOKS.USERS SET SSN=?, USERNAME=?,ID_ROLE=? WHERE SSN=?";
                                 pstmnt = connection.prepareStatement(DML);
                                 pstmnt.setString(1, ssn);
                                 pstmnt.setString(2, username);
                                 pstmnt.setString(3, role);
                                 pstmnt.setString(4, ssn);
                             }else{
-                                String DML = "UPDATE EBOOKS.USERS SET ssn=?, name=?, password=?,role=? WHERE SSN=?";
+                                String DML = "UPDATE EBOOKS.USERS SET SSN=?, USERNAME=?, PASSWORD=?,ID_ROLE=? WHERE SSN=?";
                                 pstmnt = connection.prepareStatement(DML);
                                 pstmnt.setString(1, ssn);
                                 pstmnt.setString(2, username);
@@ -165,7 +165,7 @@ public class eBooksStoreAdminUsersServlet extends HttpServlet {
                         for(String s : selectedCheckboxes){
                             // realize update of all selected rows
                             String ssn = s;
-                            String DML = "UPDATE EBOOKS.USERS SET role=? WHERE SSN=?";
+                            String DML = "UPDATE EBOOKS.USERS SET ID_ROLE=? WHERE SSN=?";
                             pstmnt = connection.prepareStatement(DML);
                             pstmnt.setString(1, role);
                             pstmnt.setString(2, ssn);

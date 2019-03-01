@@ -14,8 +14,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Electronic Books Store Manage User Roles Page</title>
         <link rel="stylesheet" type="text/css" href=".\\css\\ebookstore.css">
+        <link href=".\\css\\menu.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <h1 background-color: brown>Admin panel for user role</h1>
             <%-- test if actual user is authenticated and authorized --%>
         <c:choose>
                 <c:when test="${validUser == true}">   
@@ -31,7 +33,7 @@
                         user="test"  
                         password="test"/>
                         <sql:query dataSource="${snapshot}" var="result">
-                            SELECT ROLE from EBOOKS.ROLES ORDER BY ROLE ASC 
+                            SELECT ID,ROLE from EBOOKS.ROLES ORDER BY ROLE ASC 
                         </sql:query>
                         <table border="1" width="100%">
                             <tr>
@@ -46,9 +48,9 @@
                             </c:forEach>
                         </table>
                         <%-- Details --%>
-                        <table class="tablecenterdwithborder">
+                        <table class="tablecenterdwithborder" >
                             <tr><td>
-                            <table>
+                            <table style = "margin-top: 2px;">
                                 <tr>
                                     <td> ROLE </td>
                                     <td> <input type="text" name="admin_user_roles_role"></input></td>
