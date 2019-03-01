@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+    Document   : eBooksStore_ManageUsersPage.html
+    Author     : Laurentiu
+    Copyright  : Laurentiu
+-->
+<html>
+    <head>
+        <title>Manage users</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/eBooksStoreCSS.css">
+        <link rel="stylesheet" type="text/css" href="./css/menu.css">
+    </head>
+    <body>
+        <ul id="nav">
+            <li><a href="eBooksStore_MainPage.html">Home</a></li>
+            <li><a href="#">Manage</a>
+                <ul>
+                    <li><a href="eBooksStore_ManageUsersPage.html">Users</a></li>
+                    <li><a href="eBooksStore_MainPage.html">eBooks</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Orders</a>
+                <ul>
+                    <li><a href="eBooksStore_MainPage.html">Orders</a></li>
+                    <li><a href="eBooksStore_MainPage.html">eBooks Inventory</a></li>
+                </ul>
+            </li>    
+            <li><a href="eBooksStore_IndexPage.html">Log out</a></li>
+        </ul>
+        <form action="eBooksStore_ManageUsersPage.html" method="POST">
+            <table border="1" width="100%">
+                <tr>
+                    <td width="4%" class="thc"> select </td>   
+                    <td width="20%" class="thc">USERNAME</td>
+                    <td width="20%" class="thc">PASSWORD</td>
+                    <td width="20%" class="thc">ROLE</td>
+                </tr>
+            </table>
+            <table border="1" width="100%">    
+                <tr>
+                    <td width="4%" class="tdc"><input type="checkbox" name="admin_users_checkbox" value="${row.ssn}"></td>
+                    <td width="20%" class="tdc">admin</td>
+                    <td width="20%" class="tdc">admin</td>
+                    <td width="20%" class="tdc">admin</td>
+                </tr>
+                <tr>
+                    <td width="4%" class="tdc"><input type="checkbox" name="admin_users_checkbox" value="${row.ssn}"></td>
+                    <td width="20%" class="tdc">pradu</td>
+                    <td width="20%" class="tdc">ebook12</td>
+                    <td width="20%" class="tdc">user</td>
+                </tr>
+            </table>
+            <table class="tablecenterdwithborder">
+                <tr><td>Username:</td><td><input style="width: 100%" class = "inputlarge" type="text" name="authenticationpage_username"></td></tr> 
+                <tr><td>Password:</td><td><input style="width: 100%" class = "inputlarge" type="password" name="authenticationpage_password"></td></tr>
+                <tr><td>Type:</td><td><select><option name="admin">admin</option><option name="user">user</option></select></td></tr> 
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="authenticationpage_authenticate" value="Insert">
+                        <input type="submit" name="authenticationpage_authenticate" value="Update">
+                        <input type="submit" name="authenticationpage_authenticate" value="Delete">
+                        <input type="submit" name="authenticationpage_authenticate" value="Cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script src="js/script.js"></script>
+    </body>
+</html>
